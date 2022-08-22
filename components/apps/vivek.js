@@ -250,7 +250,7 @@ function Projects() {
         {
             name: "RunAndFurious",
             date: "Jan 2022",
-            link: "https://runandufurious.fr",
+            link: "https://runandfurious.fr",
             description: [
                 "Onepage développée de manière à informer et/ou conseiller des personnes dans le domaine du sport",
             ],
