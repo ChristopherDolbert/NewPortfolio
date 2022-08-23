@@ -1,4 +1,5 @@
 import displaySpotify from './components/apps/spotify';
+import displayYoutube from './components/apps/youtube';
 import displayVsCode from './components/apps/vscode';
 import { displayTerminal } from './components/apps/terminal';
 import { displaySettings } from './components/apps/settings';
@@ -57,11 +58,20 @@ const apps = [
     {
         id: "spotify",
         title: "Spotify",
-        icon: './themes/Yaru/apps/spotify.png',
+        icon: './themes/Yaru/apps/spt.svg',
         disabled: false,
         favourite: true,
         desktop_shortcut: false,
         screen: displaySpotify, // India Top 50 Playlist 😅
+    },
+    {
+        id: "youtube",
+        title: "Youtube",
+        icon: './themes/Yaru/apps/yt.svg',
+        disabled: false,
+        favourite: true,
+        desktop_shortcut: false,
+        screen: displayYoutube, // India Top 50 Playlist 😅
     },
     {
         id: "settings",
