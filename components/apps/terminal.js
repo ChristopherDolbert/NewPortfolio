@@ -189,12 +189,12 @@ export class Terminal extends Component {
                     break;
                 }
                 if (words.length > 1) {
-                    result = "too many arguments, arguments must me <1.";
+                    result = "trop d'arguments, les arguments doivent faire <1.";
                     break;
                 }
 
                 if (rest === "personal-documents") {
-                    result = `bash /${this.curr_dir_name} : Permission denied 😏`;
+                    result = `bash /${this.curr_dir_name} : Permission refusée 😏`;
                     break;
                 }
 
@@ -203,11 +203,11 @@ export class Terminal extends Component {
                     this.curr_dir_name = rest;
                 }
                 else if (rest === ".." || rest === "../") {
-                    result = "Type 'cd' to go back 😅";
+                    result = "Tapez 'cd' pour revenir en arrière 😅";
                     break;
                 }
                 else {
-                    result = `bash: cd: ${words}: No such file or directory`;
+                    result = `bash: cd: ${words}: Aucun fichier ou répertoire de ce type`;
                 }
                 break;
             case "ls":
@@ -215,18 +215,18 @@ export class Terminal extends Component {
                 if (target === "" || target === undefined || target === null) target = this.curr_dir_name;
 
                 if (words.length > 1) {
-                    result = "too many arguments, arguments must me <1.";
+                    result = "trop d'arguments, les arguments doivent faire <1.";
                     break;
                 }
                 if (target in this.child_directories) {
                     result = this.childDirectories(target).join("");
                 }
                 else if (target === "personal-documents") {
-                    result = "Nope! 🙃";
+                    result = "Nop! 🙃";
                     break;
                 }
                 else {
-                    result = `ls: cannot access '${words}': No such file or directory                    `;
+                    result = `ls: ne peut accéder à '${words}': Aucun fichier ou répertoire de ce type                    `;
                 }
                 break;
             case "mkdir":
@@ -234,7 +234,7 @@ export class Terminal extends Component {
                     this.props.addFolder(words[0]);
                     result = "";
                 } else {
-                    result = "mkdir: missing operand";
+                    result = "mkdir: opérande manquant";
                 }
                 break;
             case "pwd":
@@ -245,7 +245,7 @@ export class Terminal extends Component {
                 if (words[0] === "." || words.length === 0) {
                     this.props.openApp("vscode");
                 } else {
-                    result = "Command '" + main + "' not found, or not yet implemented.<br>Available Commands:[ cd, ls, pwd, echo, clear, exit, mkdir, code, spotify, chrome, about-vivek, todoist, trash, settings, sendmsg]";
+                    result = "Commande '" + main + "' non trouvé, ou pas encore implémenté.<br>Commandes disponibles :[ cd, ls, pwd, echo, clear, exit, mkdir, code, spotify, chrome, about-vivek, todoist, trash, settings, sendmsg].";
                 }
                 break;
             case "echo":
@@ -255,56 +255,56 @@ export class Terminal extends Component {
                 if (words[0] === "." || words.length === 0) {
                     this.props.openApp("spotify");
                 } else {
-                    result = "Command '" + main + "' not found, or not yet implemented.<br>Available Commands: [ cd, ls, pwd, echo, clear, exit, mkdir, code, spotify, chrome, about-vivek, todoist, trash, settings, sendmsg ]";
+                    result = "Commande '" + main + "' non trouvé, ou pas encore implémenté.<br>Commandes disponibles :[ cd, ls, pwd, echo, clear, exit, mkdir, code, spotify, chrome, about-vivek, todoist, trash, settings, sendmsg].";
                 }
                 break;
             case "chrome":
                 if (words[0] === "." || words.length === 0) {
                     this.props.openApp("chrome");
                 } else {
-                    result = "Command '" + main + "' not found, or not yet implemented.<br>Available Commands: [ cd, ls, pwd, echo, clear, exit, mkdir, code, spotify, chrome, about-vivek, todoist, trash, settings, sendmsg ]";
+                    result = "Commande '" + main + "' non trouvé, ou pas encore implémenté.<br>Commandes disponibles :[ cd, ls, pwd, echo, clear, exit, mkdir, code, spotify, chrome, about-vivek, todoist, trash, settings, sendmsg].";
                 }
                 break;
             case "todoist":
                 if (words[0] === "." || words.length === 0) {
                     this.props.openApp("todo-ist");
                 } else {
-                    result = "Command '" + main + "' not found, or not yet implemented.<br>Available Commands: [ cd, ls, pwd, echo, clear, exit, mkdir, code, spotify, chrome, about-vivek, todoist, trash, settings, sendmsg ]";
+                    result = "Commande '" + main + "' non trouvé, ou pas encore implémenté.<br>Commandes disponibles :[ cd, ls, pwd, echo, clear, exit, mkdir, code, spotify, chrome, about-vivek, todoist, trash, settings, sendmsg].";
                 }
                 break;
             case "trash":
                 if (words[0] === "." || words.length === 0) {
                     this.props.openApp("trash");
                 } else {
-                    result = "Command '" + main + "' not found, or not yet implemented.<br>Available Commands: [ cd, ls, pwd, echo, clear, exit, mkdir, code, spotify, chrome, about-vivek, todoist, trash, settings, sendmsg ]";
+                    result = "Commande '" + main + "' non trouvé, ou pas encore implémenté.<br>Commandes disponibles :[ cd, ls, pwd, echo, clear, exit, mkdir, code, spotify, chrome, about-vivek, todoist, trash, settings, sendmsg].";
                 }
                 break;
             case "about-vivek":
                 if (words[0] === "." || words.length === 0) {
                     this.props.openApp("about-vivek");
                 } else {
-                    result = "Command '" + main + "' not found, or not yet implemented.<br>Available Commands: [ cd, ls, pwd, echo, clear, exit, mkdir, code, spotify, chrome, about-vivek, todoist, trash, settings, sendmsg ]";
+                    result = "Commande '" + main + "' non trouvé, ou pas encore implémenté.<br>Commandes disponibles :[ cd, ls, pwd, echo, clear, exit, mkdir, code, spotify, chrome, about-vivek, todoist, trash, settings, sendmsg].";
                 }
                 break;
             case "terminal":
                 if (words[0] === "." || words.length === 0) {
                     this.props.openApp("terminal");
                 } else {
-                    result = "Command '" + main + "' not found, or not yet implemented.<br>Available Commands: [ cd, ls, pwd, echo, clear, exit, mkdir, code, spotify, chrome, about-vivek, todoist, trash, settings, sendmsg ]";
+                    result = "Commande '" + main + "' non trouvé, ou pas encore implémenté.<br>Commandes disponibles :[ cd, ls, pwd, echo, clear, exit, mkdir, code, spotify, chrome, about-vivek, todoist, trash, settings, sendmsg].";
                 }
                 break;
             case "settings":
                 if (words[0] === "." || words.length === 0) {
                     this.props.openApp("settings");
                 } else {
-                    result = "Command '" + main + "' not found, or not yet implemented.<br>Available Commands: [ cd, ls, pwd, echo, clear, exit, mkdir, code, spotify, chrome, about-vivek, todoist, trash, settings, sendmsg ]";
+                    result = "Commande '" + main + "' non trouvé, ou pas encore implémenté.<br>Commandes disponibles :[ cd, ls, pwd, echo, clear, exit, mkdir, code, spotify, chrome, about-vivek, todoist, trash, settings, sendmsg].";
                 }
                 break;
             case "sendmsg":
                 if (words[0] === "." || words.length === 0) {
                     this.props.openApp("gedit");
                 } else {
-                    result = "Command '" + main + "' not found, or not yet implemented.<br>Available Commands: [ cd, ls, pwd, echo, clear, exit, mkdir, code, spotify, chrome, about-vivek, todoist, trash, settings, sendmsg ]";
+                    result = "Commande '" + main + "' non trouvé, ou pas encore implémenté.<br>Commandes disponibles :[ cd, ls, pwd, echo, clear, exit, mkdir, code, spotify, chrome, about-vivek, todoist, trash, settings, sendmsg].";
                 }
                 break;
             case "clear":
@@ -320,10 +320,10 @@ export class Terminal extends Component {
                     action: "lol",
                 });
 
-                result = "<img class=' w-2/5' src='./images/memes/used-sudo-command.webp' />";
+                result = "<img class=' w-2/5' src='./images/memes/sudo.gif' />";
                 break;
             default:
-                result = "Command '" + main + "' not found, or not yet implemented.<br>Available Commands: [ cd, ls, pwd, echo, clear, exit, mkdir, code, spotify, chrome, about-vivek, todoist, trash, settings, sendmsg ]";
+                result = "Commande '" + main + "' non trouvé, ou pas encore implémenté.<br>Commandes disponibles :[ cd, ls, pwd, echo, clear, exit, mkdir, code, spotify, chrome, about-vivek, todoist, trash, settings, sendmsg].";
         }
         document.getElementById(`row-result-${rowId}`).innerHTML = result;
         this.appendTerminalRow();
