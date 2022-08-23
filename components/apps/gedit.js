@@ -44,13 +44,14 @@ export class Gedit extends Component {
 
         const serviceID = process.env.NEXT_PUBLIC_SERVICE_ID;
         const templateID = process.env.NEXT_PUBLIC_TEMPLATE_ID;
+        const userID = process.env.NEXT_PUBLIC_USER_ID;
         const templateParams = {
             'name': name,
             'subject': subject,
             'message': message,
         }
 
-        emailjs.send(serviceID, templateID, templateParams).then(() => {
+        emailjs.send(serviceID, templateID, userID, templateParams).then(() => {
             this.setState({ sending: false });
             $("#close-gedit").trigger("click");
         }).catch(() => {
