@@ -30,7 +30,7 @@ export class Gedit extends Component {
         let error = false;
 
 
-        if (!email.includes("@")) {
+        if (!email.includes("@") && !email.includes(".")) {
             $("#sender-email").val('');
             $("#sender-email").attr("placeholder", "Merci d'utiliser un vrai email");
             error = true;
