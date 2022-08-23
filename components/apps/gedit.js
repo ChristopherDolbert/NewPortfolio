@@ -29,17 +29,22 @@ export class Gedit extends Component {
 
         let error = false;
 
-        if (email.length === 0) {
-            $("#sender-email").val('');
-            $("#sender-email").attr("placeholder", "L'e-mail ne doit pas être vide !");
-            error = true;
-        }
 
         if (!email.includes("@")) {
             $("#sender-email").val('');
             $("#sender-email").attr("placeholder", "Merci d'utiliser un vrai email");
             error = true;
+        } else if(email.length === 0) {
+            $("#sender-email").val('');
+            $("#sender-email").attr("placeholder", "L'e-mail ne doit pas être vide !");
+            error = true;
+        } else if(email.length <= 8) {
+            $("#sender-email").val('');
+            $("#sender-email").attr("placeholder", "Êtes-vous sûr que vous utilisez un bon email ?");
+            error = true;
         }
+
+
 
         if (name.length === 0) {
             $("#sender-name").val('');
