@@ -356,6 +356,6 @@ function Projects() {
 }
 function Resume() {
     return (
-        <iframe className="h-full w-full" src="./files/cv.pdf" title="vivek patel resume" frameBorder="0"></iframe>
+        <iframe className="h-full w-full" src="./files/cv.pdf" title="Christopher Dolbert" frameBorder="0"></iframe>
     )
 }
