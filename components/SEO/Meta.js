@@ -40,7 +40,7 @@ export default function Meta() {
                 content="Portfolio personnel de Christopher Dolbert (SailorEudes). Réalisé avec Ubuntu 20.4 (Linux), thème par Next.js et Tailwind CSS" />
             <meta name="og:image" content="images/logos/logo_1200.svg" />
             <meta name="og:url" content="https://christopher-dolbert.fr/" />
-            <meta name="og:site_name" content="Vivek Patel Personal Portfolio" />
+            <meta name="og:site_name" content="Christopher Dolbert - Site Officiel" />
             <meta name="og:locale" content="fr_FR" />
             <meta name="og:type" content="website" />
 
