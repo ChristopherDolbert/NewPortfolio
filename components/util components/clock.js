@@ -44,7 +44,7 @@ export default class Clock extends Component {
         else if (this.props.onlyDay) {
             display_time = day + " " + month + " " + date;
         }
-        else display_time = day + " " +date + " " + month + " " + date + ", " + hour + ":" + minute + " ";
+        else display_time = day + " " +date + " " + month + " 20" + date + ", " + hour + ":" + minute + " ";
         return <span>{display_time}</span>;
     }
 }
