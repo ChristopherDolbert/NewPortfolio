@@ -1,5 +1,6 @@
 import displaySpotify from './components/apps/spotify';
 import displayEustach from './components/apps/eustach';
+import displayMyHabbo from './components/apps/myhabbo';
 import displayVsCode from './components/apps/vscode';
 import { displayTerminal } from './components/apps/terminal';
 import { displaySettings } from './components/apps/settings';
@@ -72,6 +73,15 @@ const apps = [
         favourite: true,
         desktop_shortcut: false,
         screen: displayEustach,
+    },
+    {
+        id: "myhabbo",
+        title: "MyHabbo",
+        icon: './themes/Yaru/apps/myh.svg',
+        disabled: false,
+        favourite: true,
+        desktop_shortcut: false,
+        screen: displayMyHabbo,
     },
     {
         id: "settings",
