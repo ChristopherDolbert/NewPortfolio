@@ -1,5 +1,5 @@
 import displaySpotify from './components/apps/spotify';
-import displayYoutube from './components/apps/youtube';
+import displayEustach from './components/apps/eustach';
 import displayVsCode from './components/apps/vscode';
 import { displayTerminal } from './components/apps/terminal';
 import { displaySettings } from './components/apps/settings';
@@ -62,16 +62,16 @@ const apps = [
         disabled: false,
         favourite: true,
         desktop_shortcut: false,
-        screen: displaySpotify, // India Top 50 Playlist 😅
+        screen: displaySpotify,
     },
     {
-        id: "youtube",
-        title: "Youtube",
-        icon: './themes/Yaru/apps/yt.svg',
+        id: "eustach",
+        title: "Eustach",
+        icon: './themes/Yaru/apps/eust.svg',
         disabled: false,
         favourite: true,
         desktop_shortcut: false,
-        screen: displayYoutube, // India Top 50 Playlist 😅
+        screen: displayEustach,
     },
     {
         id: "settings",
